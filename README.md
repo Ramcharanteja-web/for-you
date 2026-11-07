@@ -17,3 +17,4 @@ Simply double-click `start.bat` or run:
 python run_server.py
 ```
 Then visit `http://localhost:5500` in your browser.
+
