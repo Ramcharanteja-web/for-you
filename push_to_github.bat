@@ -10,8 +10,8 @@ echo.
 
 git status
 echo.
-echo Pushing to main branch...
-git push -u origin main
+echo Pushing to main branch on GitHub...
+git push --force -u origin main
 
 if %ERRORLEVEL% EQU 0 (
     echo.
@@ -22,24 +22,16 @@ if %ERRORLEVEL% EQU 0 (
 ) else (
     echo.
     echo ==================================================================
-    echo    NOTE: If you got a 403 Permission error, Windows Credential
-    echo    Manager is currently using your other GitHub account:
-    echo    'ramcharantejadarelli629-web'
+    echo    GitHub requires authorization for account: Ramcharanteja-web
     echo.
-    echo    You can either:
-    echo    1. Add 'ramcharantejadarelli629-web' as a Collaborator with Write
-    echo       permission in repository settings at:
-    echo       https://github.com/Ramcharanteja-web/for-you/settings/access
-    echo.
-    echo    OR
-    echo    2. Paste your GitHub Personal Access Token below to push right now.
+    echo    If you have a GitHub Personal Access Token, paste it below.
+    echo    (Or get one here: https://github.com/settings/tokens/new?scopes=repo )
     echo ==================================================================
-    set /p GHTOKEN="Enter GitHub Personal Access Token (or press Enter to exit): "
+    set /p GHTOKEN="Enter GitHub Token (or press Enter to exit): "
     if not "%GHTOKEN%"=="" (
-        git push https://%GHTOKEN%@github.com/Ramcharanteja-web/for-you.git main
+        git push --force https://%GHTOKEN%@github.com/Ramcharanteja-web/for-you.git main
     )
 )
 
 echo.
 pause
-
