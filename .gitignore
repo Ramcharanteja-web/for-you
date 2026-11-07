@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.zip
+.vscode/
+.idea/
+index_backup.html
+package-lock.json
+check_*.js
