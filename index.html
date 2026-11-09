@@ -1651,286 +1651,73 @@
     }
 
     /* =======================================================
-       404 GLITCH PRANK LOCKDOWN OVERLAY
+       48-HOUR REALISTIC 404 NOT FOUND SCREEN
        ======================================================= */
-    .glitch-lock-overlay {
+    .real-404-overlay {
       position: fixed;
       inset: 0;
-      z-index: 9999999;
-      background: #090a0f;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
-      overflow-y: auto;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .glitch-lock-overlay.glitch-dissolve {
-      opacity: 0;
-      transform: scale(1.05);
-      pointer-events: none;
-    }
-
-    .glitch-scanlines {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
-      background-size: 100% 4px;
-      z-index: 1;
-      opacity: 0.6;
-    }
-
-    .glitch-container {
-      position: relative;
-      z-index: 2;
-      max-width: 620px;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(244, 63, 94, 0.35);
-      border-radius: 18px;
-      padding: 38px 24px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(244, 63, 94, 0.18);
-      backdrop-filter: blur(12px);
-      text-align: center;
-    }
-
-    .glitch-badge {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #fb7185;
-      background: rgba(244, 63, 94, 0.14);
-      border: 1px solid rgba(244, 63, 94, 0.3);
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 16px;
-    }
-
-    .glitch-code-wrapper {
-      margin: 6px 0 12px;
-    }
-
-    .glitch-code {
-      font-size: clamp(4.2rem, 15vw, 7.2rem);
-      font-weight: 900;
-      line-height: 1;
-      color: #f43f5e;
-      text-shadow: 3px 3px 0 #06b6d4, -3px -3px 0 #ec4899;
-      cursor: pointer;
-      user-select: none;
-      display: inline-block;
-      transition: transform 0.2s ease;
-      letter-spacing: 4px;
-    }
-
-    .glitch-code:hover {
-      transform: scale(1.05);
-    }
-
-    .glitch-title {
-      font-size: clamp(1.35rem, 4vw, 1.8rem);
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
-    }
-
-    .glitch-subtitle {
-      font-size: 0.92rem;
-      color: #94a3b8;
-      margin-bottom: 20px;
-    }
-
-    .glitch-mono {
-      font-family: Consolas, monospace;
-      color: #f43f5e;
-      background: rgba(244, 63, 94, 0.12);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    .glitch-terminal {
-      background: #0b0f19;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      text-align: left;
-      margin: 16px 0 20px;
-      overflow: hidden;
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 0.88rem;
-    }
-
-    .terminal-header {
-      background: #111827;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .terminal-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .dot-red { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; }
-    .dot-yellow { width: 10px; height: 10px; border-radius: 50%; background: #f59e0b; }
-    .dot-green { width: 10px; height: 10px; border-radius: 50%; background: #10b981; }
-
-    .terminal-title {
-      font-size: 0.75rem;
-      color: #64748b;
-      margin-left: 6px;
-    }
-
-    .terminal-body {
-      padding: 16px 18px;
-      color: #cbd5e1;
-      line-height: 1.7;
-    }
-
-    .terminal-body p {
-      margin-bottom: 8px;
-    }
-
-    .log-prefix {
-      color: #f43f5e;
-      font-weight: 700;
-    }
-
-    .glitch-timer-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 16px 0 4px;
-      padding: 12px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(244, 63, 94, 0.35);
-      border-radius: 10px;
-    }
-
-    .timer-unit {
+      z-index: 999999999;
+      background: #ffffff;
+      color: #24292f;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      padding: 32px 16px;
+      text-align: center;
+      box-sizing: border-box;
     }
 
-    .timer-num {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #38bdf8;
-      letter-spacing: 1px;
-      font-variant-numeric: tabular-nums;
+    .real-404-box {
+      max-width: 500px;
+      width: 100%;
     }
 
-    .timer-label {
-      font-size: 0.65rem;
-      color: #64748b;
-      letter-spacing: 1px;
+    .real-404-code {
+      font-size: clamp(48px, 12vw, 68px);
       font-weight: 600;
+      line-height: 1;
+      margin: 0 0 12px 0;
+      color: #24292f;
     }
 
-    .timer-sep {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #475569;
-      margin-top: -10px;
+    .real-404-sub {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 0 16px 0;
+      color: #24292f;
     }
 
-    .glitch-footer-note {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin-bottom: 18px;
+    .real-404-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #57606a;
+      margin: 0;
     }
 
-    .glitch-btn {
-      background: linear-gradient(135deg, #f43f5e, #be123c);
-      color: #ffffff;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(244, 63, 94, 0.4);
-      transition: all 0.25s ease;
-    }
-
-    .glitch-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(244, 63, 94, 0.55);
-    }
-
-    .glitch-retry-msg {
-      margin-top: 12px;
-      font-size: 0.9rem;
-      min-height: 22px;
-      font-weight: 600;
-      transition: color 0.3s ease;
+    .real-404-footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #d0d7de;
+      font-size: 13px;
+      color: #8c959f;
     }
   </style>
 </head>
 <body>
 
   <!-- =======================================================
-       404 GLITCH PRANK LOCKDOWN OVERLAY (TEASING PRANK)
+       48-HOUR REALISTIC 404 NOT FOUND OVERLAY
        ======================================================= -->
-  <div class="glitch-lock-overlay" id="glitchLockOverlay" style="display:none;">
-    <div class="glitch-scanlines"></div>
-    <div class="glitch-container">
-      <div class="glitch-badge">⚠️ SYSTEM ANOMALY DETECTED</div>
-      
-      <div class="glitch-code-wrapper" title="Tap 5 times to unlock if you are the master!">
-        <div class="glitch-code" id="glitchCode" onclick="handleGlitchCodeTap()">404</div>
+  <div class="real-404-overlay" id="real404Screen" style="display:none;">
+    <div class="real-404-box">
+      <h1 class="real-404-code">404</h1>
+      <p class="real-404-sub">File not found</p>
+      <p class="real-404-desc">The site configured at this address does not contain the requested file.</p>
+      <div class="real-404-footer">
+        <span>GitHub Pages</span>
       </div>
-
-      <h1 class="glitch-title">Page Temporarily Glitched! ⚡</h1>
-      <p class="glitch-subtitle">
-        Error Code: <span class="glitch-mono">ERR_BROTHER_MISCHIEF_OVERLOAD</span>
-      </p>
-
-      <div class="glitch-terminal">
-        <div class="terminal-header">
-          <div class="terminal-dots">
-            <span class="dot-red"></span>
-            <span class="dot-yellow"></span>
-            <span class="dot-green"></span>
-          </div>
-          <span class="terminal-title">server_diagnostics.log</span>
-        </div>
-        <div class="terminal-body">
-          <p><span class="log-prefix">[CRITICAL]</span> Connection to <code>pandhini-birthday-server</code> interrupted!</p>
-          <p><span class="log-prefix">[SCAN]</span> Photos, cake &amp; sweet memories status: <strong style="color:#4ade80;">100% SAFE ♡</strong></p>
-          <p><span class="log-prefix">[DIAGNOSIS]</span> A certain annoying brother tripped the circuit breaker 😈</p>
-          <p><span class="log-prefix">[NOTICE]</span> Don't worry Nandhini! System auto-restores in:</p>
-          <div class="glitch-timer-box">
-            <div class="timer-unit"><span class="timer-num" id="glitchHours">00</span><span class="timer-label">HOURS</span></div>
-            <span class="timer-sep">:</span>
-            <div class="timer-unit"><span class="timer-num" id="glitchMinutes">00</span><span class="timer-label">MINUTES</span></div>
-            <span class="timer-sep">:</span>
-            <div class="timer-unit"><span class="timer-num" id="glitchSeconds">00</span><span class="timer-label">SECONDS</span></div>
-          </div>
-        </div>
-      </div>
-
-      <p class="glitch-footer-note">
-        <em>Tip for Nandhini:</em> Be nice to your brother, or try tapping the <code>404</code> number 5 times! 😉
-      </p>
-
-      <div class="glitch-actions">
-        <button class="glitch-btn" onclick="retryGlitchConnection()">
-          <span>⚡ Try Reconnecting</span>
-        </button>
-      </div>
-      <div class="glitch-retry-msg" id="glitchRetryMsg"></div>
     </div>
   </div>
 
@@ -2464,140 +2251,42 @@ Never change who you are, Nandhini. I hope our bond has no end and we always be 
        ======================================================= -->
   <script>
     /* =======================================================
-       404 GLITCH PRANK LOCKDOWN CONFIGURATION
+       48-HOUR AUTHENTIC 404 NOT FOUND LOCKDOWN
        ======================================================= */
-    // Duration in hours: 24 (or change to 48 if you want longer tease)
-    const GLITCH_PRANK_HOURS = 24;
-    // Deployed timestamp: 2026-11-09 17:00:00 IST
-    const GLITCH_DEPLOY_TIMESTAMP = 1794223827000;
-    const GLITCH_UNLOCK_TIMESTAMP = GLITCH_DEPLOY_TIMESTAMP + (GLITCH_PRANK_HOURS * 3600 * 1000);
+    // Automatically restores website exactly 48 hours from: 2026-11-09 17:12:00 IST
+    // Restoration Date & Time: 2026-11-11 17:12:00 IST
+    const PRANK_UNLOCK_TIMESTAMP = 1794397320000;
+    const ORIGINAL_PAGE_TITLE = "Happy Birthday, Nandhini! ♡ | To the Best Sister";
 
-    let glitchCountdownInterval = null;
-    let glitchTapCount = 0;
-    let glitchTapResetTimeout = null;
-
-    const prankRetryQuotes = [
-      "Server response: Brother said NOPE! Try again later 😂",
-      "Error: Sister too impatient! Cooldown timer in effect 😜",
-      "Glitch status: Still active. Go tease your brother first! 😉",
-      "System scan: Cake is safe, please hold on! 🎂",
-      "Unauthorized access: Only sweet sisters can enter (eventually) ♡"
-    ];
-    let prankQuoteIndex = 0;
-
-    function initGlitchLock() {
+    function check404PrankLock() {
       const params = new URLSearchParams(window.location.search);
-      const isBypassed = params.has('unlock') || params.has('bypass') || params.has('prank_off');
-      const isAlreadyUnlocked = localStorage.getItem('glitch_unlocked_v1') === 'true';
-      const isTimeUp = Date.now() >= GLITCH_UNLOCK_TIMESTAMP;
+      // Owner secret preview link (only with ?unlock)
+      const isOwnerBypass = params.has('unlock') || params.has('preview');
+      const isTimeUp = Date.now() >= PRANK_UNLOCK_TIMESTAMP;
 
-      const overlay = document.getElementById('glitchLockOverlay');
-      if (!overlay) return;
+      const screen404 = document.getElementById('real404Screen');
+      if (!screen404) return;
 
-      if (isBypassed || isAlreadyUnlocked || isTimeUp) {
-        overlay.style.display = 'none';
+      if (isOwnerBypass || isTimeUp) {
+        screen404.remove();
+        document.title = ORIGINAL_PAGE_TITLE;
         return;
       }
 
-      // Show the glitch prank overlay!
-      overlay.style.display = 'flex';
-      updateGlitchCountdown();
-      glitchCountdownInterval = setInterval(updateGlitchCountdown, 1000);
-    }
+      // Display purely authentic 404 screen
+      screen404.style.display = 'flex';
+      document.title = "404 Not Found";
 
-    function updateGlitchCountdown() {
-      const now = Date.now();
-      const diff = GLITCH_UNLOCK_TIMESTAMP - now;
-
-      if (diff <= 0) {
-        if (glitchCountdownInterval) clearInterval(glitchCountdownInterval);
-        unlockGlitchSite(true);
-        return;
-      }
-
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      const hEl = document.getElementById('glitchHours');
-      const mEl = document.getElementById('glitchMinutes');
-      const sEl = document.getElementById('glitchSeconds');
-
-      if (hEl) hEl.textContent = String(hours).padStart(2, '0');
-      if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
-      if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
-    }
-
-    function handleGlitchCodeTap() {
-      glitchTapCount++;
-      clearTimeout(glitchTapResetTimeout);
-      glitchTapResetTimeout = setTimeout(() => { glitchTapCount = 0; }, 3000);
-
-      const codeEl = document.getElementById('glitchCode');
-      if (codeEl) {
-        codeEl.classList.add('shake');
-        setTimeout(() => codeEl.classList.remove('shake'), 400);
-      }
-
-      if (typeof playTone === 'function') {
-        playTone(600 + glitchTapCount * 90, 0.12, 0, 'sine');
-      }
-
-      const retryMsg = document.getElementById('glitchRetryMsg');
-      if (retryMsg) {
-        if (glitchTapCount >= 5) {
-          retryMsg.textContent = "🎉 Secret tap detected! Unlocking your surprise...";
-          retryMsg.style.color = "#4ade80";
-        } else {
-          retryMsg.textContent = `Secret tap ${glitchTapCount}/5 detected... keep tapping! 😉`;
-          retryMsg.style.color = "#fbbf24";
+      // Periodically check if 48 hours have elapsed
+      setInterval(() => {
+        if (Date.now() >= PRANK_UNLOCK_TIMESTAMP) {
+          screen404.remove();
+          document.title = ORIGINAL_PAGE_TITLE;
         }
-      }
-
-      if (glitchTapCount >= 5) {
-        setTimeout(() => unlockGlitchSite(false), 500);
-      }
+      }, 10000);
     }
 
-    function retryGlitchConnection() {
-      const retryMsg = document.getElementById('glitchRetryMsg');
-      const container = document.querySelector('.glitch-container');
-      if (container) {
-        container.classList.add('shake');
-        setTimeout(() => container.classList.remove('shake'), 450);
-      }
-      if (typeof playTone === 'function') {
-        playTone(320, 0.22, 0, 'sawtooth');
-      }
-      if (retryMsg) {
-        retryMsg.textContent = prankRetryQuotes[prankQuoteIndex % prankRetryQuotes.length];
-        retryMsg.style.color = '#f43f5e';
-        prankQuoteIndex++;
-      }
-    }
-
-    function unlockGlitchSite(automatic) {
-      if (glitchCountdownInterval) clearInterval(glitchCountdownInterval);
-      localStorage.setItem('glitch_unlocked_v1', 'true');
-
-      const overlay = document.getElementById('glitchLockOverlay');
-      if (!overlay) return;
-
-      if (typeof playBirthdayFanfare === 'function') {
-        playBirthdayFanfare();
-      }
-      if (typeof triggerHeartBurstCenter === 'function') {
-        triggerHeartBurstCenter();
-      }
-
-      overlay.classList.add('glitch-dissolve');
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 850);
-    }
-
-    // Initialize the glitch prank lock immediately!
-    initGlitchLock();
+    check404PrankLock();
 
     /* =======================================================
        EASY CONFIGURATION:
